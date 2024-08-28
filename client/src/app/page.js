@@ -98,7 +98,17 @@ const Page = () => {
 
   return (
     <>
-      {(navigation === "/login" || navigation === null) && <LogginChecker />}
+      {(navigation === "/login" || navigation === null) && <>
+        <div className="pt-4">
+          <Header
+            address={w0?.address}
+            authenticated={authenticated}
+            smartAccountAddress={smartAccountAddress}
+          />
+        </div>
+
+        <LandingPage />
+      </>}
       {navigation === "/" && (
         <>
           <div className="pt-4">
@@ -432,11 +442,10 @@ const Home = ({ smartAccount, signer, smartContractAccountAddress }) => {
                   {["deposit", "onramp"].map((tab) => (
                     <motion.button
                       key={tab}
-                      className={`px-6 py-2 rounded-full transition-colors ${
-                        activeTab === tab
+                      className={`px-6 py-2 rounded-full transition-colors ${activeTab === tab
                           ? "bg-white text-black"
                           : "text-white/80"
-                      }`}
+                        }`}
                       onClick={() => {
                         setActiveTab(tab);
                         tab === "deposit" && getBalance();
