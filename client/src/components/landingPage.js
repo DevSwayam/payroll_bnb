@@ -21,7 +21,8 @@ export default function LandingPage() {
 import { motion } from "framer-motion";
 import { usePrivy } from "@privy-io/react-auth";
 
-const Hero = ({ setSelectedTab, login }) => {
+const Hero = ({ setSelectedTab }) => {
+  const { login } = usePrivy();
   const dispatch = useDispatch();
   const handleNavigation = (to) => {
     dispatch(setNavigation(to));
