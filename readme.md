@@ -4,7 +4,7 @@
 
 **Payroll Protocol** is a confidential money distribution platform built on top of BNB , designed to provide confidentiality during the distribution of funds on-chain. By leveraging FHE cryptography and smart contracts, Payroll Protocol ensures the **confidentiality**, security, and efficiency of money distribution.
 
-## Video Demo - 
+## Video Demo - https://youtu.be/5shVuHiOoNY
 
 ## Protocol Arcitecture 
 ![image](https://github.com/TechieeGeeeks/PayRoll_Protocol/assets/99035115/f47981a2-395b-4c38-9f6b-47addb97732d)
